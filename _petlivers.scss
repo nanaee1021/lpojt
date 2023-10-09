@@ -1,0 +1,126 @@
+// ミキ
+
+
+.petlivers {
+
+    background-color: black;
+
+
+    .petlivers2 {
+        display: flex;
+        flex-wrap: wrap;
+
+        max-width: 1170px;
+        width: 79%;
+        margin: 0 auto;
+    }
+
+    ::after .wrap {
+        white-space: pre;
+    }
+
+
+    .title {
+        justify-content: center;
+        text-align: center;
+        font-size: 30px;
+        margin-top: 30px;
+    }
+
+    .livers-minioya {
+
+        width: 23%;
+        background-color: white;
+
+        padding: 1.5em 1em;
+        margin: 2em 5px;
+        // border: solid 3px #000000;
+
+    }
+
+    .liver,
+    .liver-text {
+        font-size: 16px;
+    }
+
+    .livers-name {
+        font-size: 24px;
+    }
+
+    .alice2 {
+        border: solid 3px #EA5555;
+
+    }
+
+    .nancy2 {
+        border: solid 3px #A817FB;
+
+    }
+
+    .mat2 {
+        border: solid 3px #F0C83B;
+
+    }
+
+    .oscar2 {
+        border: solid 3px #E16A6E;
+
+    }
+
+    .nataly2 {
+        border: solid 3px #ED61F6;
+
+    }
+
+    .zach2 {
+        border: solid 3px #52F1BF;
+
+    }
+
+    .john2 {
+        border: solid 3px #55B0EA;
+
+    }
+
+    .simona2 {
+        border: solid 3px #FFB017;
+
+    }
+
+}
+
+@media screen and (max-width:767px) {
+
+    .petlivers {
+        width: auto;
+
+
+        // width効かない治してない
+
+
+        .petlivers2 {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .livers-minioya {
+            width: auto;
+
+        }
+    }
+}
+
+
+//    スクロール
+
+.fadein1 {
+    transition: all 1s ease;
+    opacity: 1;
+
+}
+
+.fadein1.hide1 {
+
+    opacity: 0;
+    transform: translateY(100px);
+}

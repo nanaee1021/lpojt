@@ -1,0 +1,260 @@
+// ミキ
+
+.title {
+    margin-top: 30px;
+}
+
+.about {
+
+    max-width: 1170px;
+    width: 79%;
+    margin: 0 auto;
+
+    .about-title1 {
+        font-size: 20px;
+        margin: 30px;
+    }
+
+    .about-texts {
+        width: 67%;
+        align-items: center;
+    }
+
+    .about-explain {
+        font-size: 18px;
+        margin: 30px;
+    }
+
+
+    .about1,
+    .about2 {
+        display: flex;
+        align-items: center;
+    }
+
+    .about-img {
+        position: relative;
+        width: 43%;
+        height: auto;
+    }
+
+    .about1 {
+        flex-direction: row-reverse;
+
+        .about-main-img {
+            box-shadow: 13px 9px 0px 0px #F9C83B;
+        }
+
+    }
+
+    .about2 {
+        .about-main-img {
+            box-shadow: -13px 9px 0px 0px #FFF835;
+        }
+    }
+
+    .about-decoimg {
+        position: relative;
+
+        .one,
+        .two,
+        .three,
+        .four,
+        .five,
+        .six {
+            position: absolute;
+        }
+
+        .one {
+            width: 15%;
+            left: -13.3%;
+            top: 130px;
+
+        }
+
+        .two {
+            width: 10%;
+            right: -12%;
+            top: 20px;
+        }
+
+        .three {
+            width: 12.5%;
+            left: -13.5%;
+            top: 450px;
+        }
+
+        .four {
+            width: 22.5%;
+            right: -13.5%;
+            top: 330px;
+            z-index: 1;
+        }
+
+        .five {
+            width: 16.5%;
+            left: -13.3%;
+            top: 760px;
+            z-index: 1;
+        }
+
+        .six {
+            width: 7%;
+            right: -3%;
+            top: 960px;
+        }
+    }
+}
+
+// SPONSER
+
+.sponser {
+    max-width: 1170px;
+    width: 79%;
+    margin: 0 auto;
+    text-align: center;
+
+    .sponser-img {
+        flex-direction: column;
+    }
+
+    .sponser1,
+    .sponser2 {
+        margin: 20px;
+    }
+
+    .sponser1 {
+        width: 90%;
+    }
+
+    .sponser2 {
+        width: 49%;
+    }
+
+    .sponser-text {
+        font-size: 20px;
+    }
+
+}
+
+
+@media screen and (max-width:767px) {
+
+    .about {
+        .about-decoimg {
+            display: none;
+        }
+
+
+        .about1,
+        .about2 {
+            flex-direction: column;
+        }
+
+        .about-img {
+            width: auto;
+            text-align: center;
+
+            .about-main-img {
+                width: 80%;
+            }
+        }
+
+        .about-texts {
+            background-image: url(../../img/bg_01.png);
+            width: 83vw;
+            margin: 20px;
+            padding: 20px;
+
+            // margin: none;
+            .about-title1 {
+                margin: 10px;
+                font-size: 17px;
+            }
+
+            .about-explain {
+                margin: 10px;
+                font-size: 15px;
+            }
+
+        }
+    }
+
+    .sponser {
+        .sponser-text {
+            display: none;
+        }
+    }
+}
+
+//    スクロール
+// about 一つ目の写真
+// .fadein2 {
+//     transition: all 1s ease;
+//     opacity: 1;
+
+//      }
+//   .fadein2.hide2 { 
+
+//     opacity: 0;
+//     transform: translateY(100px);
+//     }
+
+// 二つ目の写真
+// .fadein3 {
+//     transition: all 1s ease;
+//     opacity: 1;
+
+//      }
+//   .fadein3.hide3 { 
+
+//     opacity: 0;
+//     transform: translateY(100px);
+//     }
+
+// sponser
+.fadein4 {
+    transition: all 1s ease;
+    opacity: 1;
+
+}
+
+.fadein4.hide4 {
+
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+
+
+// 右から
+
+
+.fadein2 {
+    transform: translateX(0);
+    transition: all 1s ease;
+    opacity: 1;
+
+}
+
+.fadein2.hide2 {
+    transform: translateX(100vw);
+    transition: all .3s linear;
+    opacity: 0;
+
+}
+
+
+.fadein3 {
+    transform: translateX(0);
+    transition: all 1s ease;
+    opacity: 1;
+
+}
+
+.fadein3.hide3 {
+    transform: translateX(-100vw);
+    transition: all .3s linear;
+    opacity: 0;
+    
+}

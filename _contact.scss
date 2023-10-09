@@ -1,0 +1,132 @@
+// ナナ
+.contact {
+    display: flex;
+    max-width: 1170px;
+    margin: 0 auto;
+    height: 620px;
+    // justify-content: center;
+
+
+    .client {
+        padding: 0 40px;
+        border-right: 2px solid black;
+        width: 50%;
+    }
+
+    .contact-title {
+        font-size: 25px;
+        background: linear-gradient(transparent 75%, #ffff7f 75%);
+        display: inline-block
+    }
+
+    .contact-text {
+        margin: 30px auto;
+    }
+
+    input {
+        width: 95%;
+        border: solid 1px black;
+    }
+
+    textarea {
+        width: 95%;
+        height: 40%;
+        border: solid 1px black;
+    }
+
+    button {
+        background-color: black;
+        color: white;
+        width: 95%;
+        text-align: center;
+        padding: 18px;
+    }
+
+
+
+    .liver {
+        width: 50%;
+        margin-left: 30px;
+
+        .liver-title {
+            font-size: 25px;
+            background: linear-gradient(transparent 75%, green 75%);
+            display: inline-block
+        }
+
+        .whatup {
+            max-width: 40%;
+        }
+
+        .arrow {
+            max-width: 12%;
+        }
+    }
+
+}
+
+
+// RESPONSIVE
+
+@media screen and (max-width:767px) {
+
+    .contact {
+        display: block;
+        height: auto;
+
+        .contact-title {
+            text-align: center;
+            justify-content: center;
+            margin-left: 30%;
+            //not good idea
+        }
+
+        button {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        textarea {
+            height: 200px;
+        }
+
+        .client,
+        .liver {
+            width: auto;
+        }
+
+
+        .client {
+            border-right: none;
+            border-bottom: 2px solid black;
+        }
+
+        .liver {
+            margin: 0 auto;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+
+            .arrow {
+                transform: rotate(90deg);
+            }
+
+        }
+
+    }
+}
+
+
+//    スクロール
+
+.fadein6 {
+    transition: all 1s ease;
+    opacity: 1;
+
+     }
+  .fadein6.hide6 { 
+
+    opacity: 0;
+    transform: translateY(100px);
+    }

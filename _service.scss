@@ -1,0 +1,86 @@
+// nana
+
+.service {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    .service-title {
+        font-size: 18px;
+    }
+
+    .service-text {
+        font-size: 16px;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .service-left {
+        width: 20%;
+        height: 90%;
+        border: 2px solid;
+        border-color: #9067E9;
+        box-shadow: 7px 8px 2px #9067E9;
+        margin-right: 30px;
+        padding: 30px;
+    }
+
+
+    .service-middle {
+        width: 20%;
+        height: 90%;
+        border: 2px solid;
+        border-color: #9067E9;
+        box-shadow: 7px 8px 2px #9067E9;
+        margin-right: 30px;
+        padding: 30px;
+
+    }
+
+    .service-right {
+        width: 20%;
+        height: 86%;
+        border: 2px solid;
+        border-color: #9067E9;
+        box-shadow: 7px 8px 2px #9067E9;
+        margin-right: 30px;
+        padding: 30px;
+    }
+
+
+
+
+}
+
+
+@media screen and (max-width:767px) {
+    .service {
+        display: block;
+
+        .service-left,
+        .service-middle,
+        .service-right {
+            width: auto;
+            margin: 20px 80px;
+
+        }
+
+    }}
+
+//    スクロール
+
+    .fadein {
+        transition: all 1s ease;
+        opacity: 1;
+
+         }
+      .fadein.hide { 
+
+        opacity: 0;
+        transform: translateY(100px);
+        }
