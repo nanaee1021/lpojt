@@ -1,0 +1,297 @@
+// ナナ
+.header-li {
+    display: flex;
+    justify-content: end;
+    font-size: 22px;
+
+
+    li {
+        margin-right: 40px;
+    }
+
+}
+
+.kv {
+    width: 89%;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    .kv-left {
+        width: 24.3%;
+
+        .sp1,
+        .sp2 {
+            display: none;
+        }
+    }
+
+    .kv-center {
+        z-index: 1;
+        padding: 0 30px;
+        width: 54%;
+        text-align: center;
+
+        .p1 {
+            font-size: 29px;
+         
+        }
+
+        .p-title {
+           
+            
+
+            font-size: 63px;
+         
+        }
+
+        .p2 {
+           
+        
+            font-size: 24px;
+           
+
+        }
+
+    }
+
+
+    .kv-right {
+        width: 24.3%;
+
+        .sp3,
+        .sp4 {
+            display: none;
+        }
+
+    }
+
+    .kv-img {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+       
+    }
+
+    .kv-sp {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .header-li {
+        display: block;
+        display: none;
+    }
+
+
+    .kv {
+        width: 100%;
+        height: 800px;
+        flex-direction: column;
+        position: relative;
+
+
+        .kv-left {
+            display: flex;
+            width: 100%;
+            height: 230px;
+
+            .kv1,
+            .kv2 {
+                display: none;
+
+            }
+
+            .sp1,
+            .sp2 {
+                display: block;
+
+
+            }
+
+            .sp1 {
+                width: 40%;
+            }
+
+            .sp2 {
+                width: 60%;
+            }
+
+
+
+        }
+
+        .kv-center {
+            height: 340px;
+            text-align: center;
+
+
+            .p1 {
+                top: 255px;
+                left: 130px;
+                font-size: 4vw;
+            }
+
+            .p-title {
+                top: 365px;
+                left: 130px;
+                font-size: 8.6vw;
+            }
+
+            .p2 {
+                font-size: 3.7vw;
+                left: 130px;
+                top: 440px;
+            }
+        }
+
+        .kv-right {
+            display: flex;
+            width: 100%;
+            height: 230px;
+
+            .kv3,
+            .kv4 {
+                display: none;
+            }
+
+            .sp3,
+            .sp4 {
+                display: block;
+                width: 100%;
+
+            }
+
+            .sp3 {
+                width: 60%;
+            }
+
+            .sp4 {
+                width: 40%;
+            }
+
+        }
+
+        .kv-img {
+            display: none;
+        }
+
+        .kv-sp {
+            display: block;
+            position: absolute;
+            top: 220px;
+            left: 0;
+            z-index: 1;
+
+        }
+    }
+
+
+// hamburger menu
+
+
+    /*----------------------------
+* メニュー開閉ボタン
+*----------------------------*/
+    .menu-btn {
+        position: fixed;
+        right: 20px;
+        z-index: 5;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+
+        .fa span {
+            display: inline-block;
+            transition: all .4s;
+            /*アニメーションの設定*/
+            position: absolute;
+            left: 12px;
+            height: 3px;
+            border-radius: 2px;
+            background: black;
+            width: 45%;
+        }
+
+        .fa span:nth-of-type(1) {
+            top: 15px;
+        }
+
+        .fa span:nth-of-type(2) {
+            top: 23px;
+        }
+
+        .fa span:nth-of-type(3) {
+            top: 31px;
+        }
+
+        /*activeクラスが付与されると線が回転して×に*/
+
+        .fa.is-active span:nth-of-type(1) {
+            top: 18px;
+            left: 18px;
+            transform: translateY(6px) rotate(-45deg);
+            width: 30%;
+        }
+
+        .fa.is-active span:nth-of-type(2) {
+            opacity: 0;
+            /*真ん中の線は透過*/
+        }
+
+        .fa.is-active span:nth-of-type(3) {
+            top: 30px;
+            left: 18px;
+            transform: translateY(-6px) rotate(45deg);
+            width: 30%;
+        }
+    }
+
+    /*----------------------------
+* メニュー本体
+*----------------------------*/
+    .header-li {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 4;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgb(4, 41, 80);
+    }
+
+    .menu__item {
+        width: 100%;
+        height: auto;
+        padding: .5em 1em;
+        text-align: center;
+        color: #fff;
+        box-sizing: border-box;
+    }
+
+    /*----------------------------
+* アニメーション部分
+*----------------------------*/
+
+    /* アニメーション前のメニューの状態 */
+    .header-li {
+        transform: translateX(100vw);
+        transition: all .3s linear;
+    }
+
+    /* アニメーション後のメニューの状態 */
+    .header-li.is-active {
+        transform: translateX(0);
+    }
+
+}
